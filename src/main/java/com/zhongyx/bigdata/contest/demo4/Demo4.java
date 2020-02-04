@@ -77,7 +77,7 @@ public class Demo4 {
 				
 				String[] fields = line.split("\t");
 				
-				//只保留第四个字段是户主的数据
+				//返回true代表保留，第四个字段是户主的数据
 				return (fields.length==4 && fields[3].equals("户主") );
 			}
 		}).
@@ -120,7 +120,7 @@ public class Demo4 {
 			public boolean filter(String line) throws Exception {
 				String[] fields = line.split("\t");
 				
-				//只保留第四个字段不是户主的数据，或一共只有3个字段的数据
+				//返回true代表保留，第四个字段不是户主的数据，或一共只有3个字段的数据
 				return (fields.length==4 && !fields[3].equals("户主")) || fields.length==3;
 				
 			}
@@ -337,7 +337,7 @@ public class Demo4 {
 			@Override
 			public boolean filter(SendMoney value) throws Exception {
 				
-				//只保留ExType不为空的数据
+				//返回true代表保留，ExType不为空
 				return !value.getExType().equals("");
 			}
 		});
