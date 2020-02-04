@@ -34,8 +34,7 @@ public class Demo3 {
 			@Override
 			public Tuple2<String,Integer> map(Tuple2<String, Double> value) throws Exception {
 				// TODO Auto-generated method stub
-				
-				String idenNo=value.f0;
+
 				double money=value.f1;
 				String type="";
 				
