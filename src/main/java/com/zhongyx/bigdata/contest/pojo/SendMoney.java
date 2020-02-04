@@ -1,5 +1,8 @@
 package com.zhongyx.bigdata.contest.pojo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SendMoney {
 	private String idenNo;
 	
@@ -16,6 +19,8 @@ public class SendMoney {
 	private Double sendMoney;
 	
 	private String exType;
+	
+	private List<String> exList=new ArrayList<String>();
 
 	public String getIdenNo() {
 		return idenNo;
@@ -85,6 +90,16 @@ public class SendMoney {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+
+	public List<String> getExList() {
+		return exList;
+	}
+
+	public void setExList(List<String> exList) {
+		this.exList = exList;
+	}
 
 	public SendMoney(String idenNo, String dept, String moneyType, Integer year, Integer gender, Long sendTime,
 			Double sendMoney, String exType) {
@@ -97,6 +112,20 @@ public class SendMoney {
 		this.sendTime = sendTime;
 		this.sendMoney = sendMoney;
 		this.exType = exType;
+	}
+
+	public SendMoney(String idenNo, String dept, String moneyType, Integer year, Integer gender, Long sendTime,
+			Double sendMoney, String exType, List<String> exList) {
+		super();
+		this.idenNo = idenNo;
+		this.dept = dept;
+		this.moneyType = moneyType;
+		this.year = year;
+		this.gender = gender;
+		this.sendTime = sendTime;
+		this.sendMoney = sendMoney;
+		this.exType = exType;
+		this.exList = exList;
 	}
 
 
